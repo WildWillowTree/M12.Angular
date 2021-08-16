@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <!--<qr-code [value]="'www.remotestack.io'"></qr-code>
+  <qr-code [value]="qrInfo" ></qr-code>-->
+
+  <div class="container m-0 row justify-content-center">
+    <h2 class="col-auto w-100 text-center">Angular QR Code Customization Example</h2>
+    <div class="justify-content-center col-auto">
+      <qr-code [value]="values" [size]="width" [level]="level" [foreground]="foreground" class="justify-self-center"></qr-code>
+    </div>
+    <br>
+    <br>
+    <div class="justify-content-center row">
+      <label class="justify-content-center col-auto">
+          Change name: <input [(ngModel)]="values" placeholder="name" class="text-center" />
+      </label>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="justify-content-between row">
+    <div class="justify-content-center col-6">
+      <label>Change to</label>:
+      <button (click)="qrData('Monica Rambeau')">Monica Rambeau</button>
+      <button (click)="qrData('Nosy Neighbor')">Nosy Neighbor</button>
+      <button (click)="qrData('Mephisto')">Mephisto</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="justify-content-center col-6">
+      <label>Change Width</label>:
+      <button (click)="qrWidth(550)">550</button>
+      <button (click)="qrWidth(450)">450</button>
+      <button (click)="qrWidth(350)">350</button>
+      <button (click)="qrWidth(250)">250</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="justify-content-center col-6">
+      <label>Update Level</label>:
+      <button (click)="qrLevel('L')"  class="level">L</button>
+      <button (click)="qrLevel('M')"  class="level">M</button>
+      <button (click)="qrLevel('Q')"  class="level">Q</button>
+      <button (click)="qrLevel('H')"  class="level">H</button>
+    </div>
+    <div class="justify-content-center col-6">
+      <label>Update Color</label>:
+      <button (click)="qrForeground('black')">Black</button>
+      <button (click)="qrForeground('red')" id="red">Red</button>
+      <button (click)="qrForeground('purple')" id="purple">Purple</button>
+      <button (click)="qrForeground('blue')" id="blue">Blue</button>
+      <button (click)="qrForeground('green')" id="green">Green</button>
+    </div>
+  </div>
+  </div>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
